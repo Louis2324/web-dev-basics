@@ -7,14 +7,20 @@ The purpose of this project is to **understand the basic structure of a web proj
 ## 🗂️ Project Structure
 
 Below is the folder layout used in this lesson:
-project-folder/
-│
-│── index.html # The main HTML page (structure/content)
-│── styles.css # CSS file for styling and layout
-│── script.js # JavaScript file for logic or interactivity
-│── assets/ # Folder for images, icons, or other static resources
 
-### 📘 Description of Each File
+```bash
+project-folder/
+│── index.html    # The main HTML page (structure/content)
+│── styles.css    # CSS file for styling and layout
+│── script.js     # JavaScript file for logic or interactivity
+│── assets/       # Folder for images, icons, or other static resources
+
+│── assets/ # Folder for images, icons, or other static resources
+```
+
+---
+
+### Description of Each File
 
 - **`index.html`** — The main entry point for the webpage. Defines the structure and content that appears in the browser.  
 - **`styles.css`** — Controls how the HTML elements look (colors, fonts, spacing, layout).  
