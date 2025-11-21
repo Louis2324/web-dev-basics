@@ -77,3 +77,46 @@ main div img {
     height: 100%;
     /* object-fit:cover; */
 }
+
+main .short {
+  grid-row: span 1;
+}
+
+main .long  {
+  grid-row: span 2;
+}
+
+
+/*responsive*/
+
+
+@media screen and (max-width: 960px) {
+    main {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 690px) {
+   main {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 20px auto;
+    gap: 10px;
+   }
+
+   main div img {
+    object-fit: contain;
+   }
+
+ 
+
+   nav h1{
+    grid-column: 1 / span 5;
+    grid-row: 1;
+   }
+
+   nav a {
+    margin-left: 80px;
+    margin-top: 10px;
+   }
+}
