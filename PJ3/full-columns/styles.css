@@ -80,7 +80,7 @@ main {
 
 /* About panel */
 .panel.about {
-  background-color: #ffbe90;
+  background-color: #7b5130;
   grid-template-rows: 1fr 1fr;
 }
 
@@ -91,7 +91,7 @@ main {
 
 /*Photos panel*/
 .panel.photos {
-  background-color: #ff9345 ;
+  background-color: #fb963e ;
   grid-template-rows: 1fr 2fr;
 }
 
@@ -99,4 +99,10 @@ main {
   main {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+@media screen and (max-width: 680px) {
+    main {
+        grid-template-columns: 1fr;
+    }
 }
