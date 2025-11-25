@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="art"></div>
+
+    <div class="container">
+        <div class="counter">
+            <input type="text" readonly id="counterDisplay" value="0">
+            <div class="btn-container">
+                <button id="startBtn">Start</button>
+                <button id="stopBtn">Stop</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </div>
+
+        <div class="logger" id="logger">
+            Counter is ready!
+        </div>
+        
+        <div class="controls-info">
+            Press SPACE to start/stop • CTRL+R to reset
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
