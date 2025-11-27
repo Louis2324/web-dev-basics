@@ -89,7 +89,8 @@ addBtn.addEventListener("click", () => {
   if (!text) return;
 
   tasks.push({ text, completed: false });
-  taskInput.value = " ";
+  taskInput.value = "";
+  setRandomPlaceholder();
   saveTasks();
   renderTasks();
 });
@@ -101,3 +102,20 @@ taskInput.addEventListener("keypress", (e) => {
 
 //initial render for saved tasks
 renderTasks();
+
+const placeholders = [
+  "What’s next?",
+  "Add another task...",
+  "You're on fire 🔥",
+  "Keep going!",
+  "What else you got?",
+  "Stay productive 💪",
+  "Another one?",
+  "Type something awesome...",
+  "What do we need to do?",
+];
+
+const setRandomPlaceholder =  () => {
+    const random = Math.floor(Math.random() * placeholders.length);
+    taskInput.placeholder = placeholders[random];
+}
