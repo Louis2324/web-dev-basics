@@ -49,6 +49,7 @@ body {
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 16px;
+    margin: 5px 10px;
 }
 
 .input-area button {
@@ -59,6 +60,7 @@ body {
     border-radius: 8px;
     cursor:pointer;
     transition: 0.3s;
+    margin: 5px 10px;
 }
 
 
@@ -111,7 +113,7 @@ body {
   border-radius: 8px;
 }
 
-.task.complete {
+.task.complete .left {
   text-decoration: line-through;
   opacity: 0.6;
 }
