@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+body {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.app {
+    background-color: white;
+    margin: 10px 20px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px
+}
+
+
+.app h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+
+.input-area {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    margin-bottom: 25px;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.input-area button {
+    padding: 12px 20px;
+    background: #4a80f0;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+
+.input-area button:hover {
+    background: #3a6ed0;
+    transform: translateX(2px);
+}
+
+
+
+.progress-container {
+  padding: 20px 40px;
+  margin-bottom: 20px;
+}
+
+.progress-label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #e3e6eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: #4caf50;
+  transition: width 0.3s;
+}
+
+#taskList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f3f6;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.task.complete {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task button {
+  background: #ff5252;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task button:hover {
+  background: #d84141;
+}
