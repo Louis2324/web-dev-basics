@@ -3,26 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
-    <title>Quote generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Quote Generator</title>
   </head>
   <body>
     <main class="main container">
-      <div class="header container">
+      <header class="header">
         <div class="title">
-          <h2>Random Quote Generator</h2>
+          <h1>Random Quote Generator</h1>
+          <p class="subtitle">Get inspired with timeless wisdom</p>
         </div>
-      </div>
+      </header>
 
-      <div class="quote container">
-        <textarea
-          name=""
-          id="qoute-container"
-          placeholder="The quote goes here"
-        ></textarea>
+      <section class="quote-section">
+        <div class="quote-container">
+          <textarea
+            id="quote-display"
+            readonly
+            placeholder="Click 'Generate' for an inspiring quote..."
+          ></textarea>
+          <div class="controls">
+            <button id="generate" class="btn-primary">
+              <span class="btn-text">Generate Quote</span>
+              <span class="btn-icon">✨</span>
+            </button>
+            <button id="copy" class="btn-secondary" title="Copy to clipboard">
+              📋
+            </button>
+          </div>
+        </div>
 
-        <button id="generate">Generate</button>
-      </div>
+        <div class="info">
+          <p>Quotes from great minds throughout history</p>
+        </div>
+      </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
