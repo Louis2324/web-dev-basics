@@ -1,3 +1,57 @@
 :root {
-    --bg:#292929;
+  --bg-body: #292929;
+  --bg-container: #414243;
+  --text-body: #e2e2e2;
+  --text-container: #e4e5e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-body);
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 50%;
+  padding: 20px 40px;
+  margin: 0 auto;
+  border: none;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  color: var(--text-container);
+}
+
+#quote-container {
+  border: 1.5px solid var(--text-body);
+  border-radius: 10px;
+  transition: all ease 0.3s;
+}
+
+#quote-container:focus {
+  border: 2px solid var(--text-container);
+}
+
+#quote-container:hover {
+    transform: translateY(-3px);
+}
+
+button {
+    border:none;
+    outline:none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--text-body);
+    transition: all ease .3s;
+}
+
+button:hover {
+    transform: scale(1.09) translateY(-2px);
 }
