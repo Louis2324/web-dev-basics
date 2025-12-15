@@ -1,8 +1,9 @@
 :root {
-  --bg-body: #292929;
-  --bg-container: #414243;
-  --text-body: #e2e2e2;
-  --text-container: #e4e5e6;
+  --bg-body: #1a1a1a;
+  --bg-container: #2d2d2d;
+  --primary: #7c3aed;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
 }
 
 * {
@@ -12,46 +13,142 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
   background-color: var(--bg-body);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .container {
+  max-width: 600px;
   width: 100%;
-  height: auto;
-  min-height: 50%;
-  padding: 20px 40px;
-  margin: 0 auto;
+  background-color: var(--bg-container);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quote-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#quote-display {
+  width: 100%;
+  min-height: 150px;
+  background: transparent;
   border: none;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  color: var(--text-container);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-style: italic;
+  resize: none;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-family: inherit;
 }
 
-#quote-container {
-  border: 1.5px solid var(--text-body);
-  border-radius: 10px;
-  transition: all ease 0.3s;
+#quote-display:focus {
+  outline: none;
 }
 
-#quote-container:focus {
-  border: 2px solid var(--text-container);
+#quote-display::placeholder {
+  color: var(--text-secondary);
 }
 
-#quote-container:hover {
-    transform: translateY(-3px);
+.controls {
+  display: flex;
+  gap: 12px;
 }
 
 button {
-    border:none;
-    outline:none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: var(--text-body);
-    transition: all ease .3s;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
 }
 
-button:hover {
-    transform: scale(1.09) translateY(-2px);
+#generate {
+  background-color: var(--primary);
+  color: white;
+  flex: 1;
+}
+
+#generate:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+#copy {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  padding: 12px;
+  width: 46px;
+}
+
+#copy:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.info {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .quote-container {
+    padding: 20px;
+  }
+
+  #quote-display {
+    min-height: 120px;
+    font-size: 1rem;
+  }
 }
