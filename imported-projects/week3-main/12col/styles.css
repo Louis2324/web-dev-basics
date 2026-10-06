@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #cecece;
+}
+
+p {
+  line-height: 1.5rem;
+  letter-spacing: 1.5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+header {
+  padding: 20px 40px;
+  background: #fff;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  grid-column: span 5;
+  color: #333;
+}
+
+header nav {
+  grid-column: span 6;
+  justify-self: end;
+}
+
+header nav a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+header nav a:hover,
+header nav a:focus {
+  color: #007acc;
+  outline: none;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #007acc;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after,
+header nav a:focus::after {
+  width: 100%;
+}
+
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+main img {
+  grid-column: span 6;
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+main img:hover {
+  transform: scale(1.09);
+}
+
+main .welcome {
+  grid-column: 8 / span 5;
+  align-self: center;
+}
+
+main .welcome h2 {
+  padding: 20px 0;
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+main h2 {
+  grid-column: span 12;
+  text-align: center;
+  font-size: 2em;
+  padding-top: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+main .card {
+  grid-column: span 4;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+main .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+main .card h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+main .card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 960px) {
+  main img {
+    grid-column: 2 / span 10;
+    height: 500px;
+  }
+
+  main .welcome {
+    grid-column: 2 / span 10;
+    text-align: center;
+  }
+
+  main .welcome h2 {
+    font-size: 2.5rem;
+    padding: 15px 0;
+  }
+
+  main .card {
+    grid-column: 2 / span 10;
+    margin-bottom: 20px;
+  }
+  
+  header {
+    padding: 15px 20px;
+  }
+  
+  header h1 {
+    grid-column: span 8;
+    font-size: 1.5rem;
+  }
+  
+  header nav {
+    grid-column: span 4;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    gap: 20px;
+  }
+  
+  main {
+    margin: 30px auto;
+    padding: 15px;
+  }
+  
+  main img {
+    grid-column: 1 / span 12;
+    height: 400px;
+  }
+  
+  main .welcome {
+    grid-column: 1 / span 12;
+  }
+  
+  main .welcome h2 {
+    font-size: 2rem;
+  }
+  
+  main .card {
+    grid-column: 1 / span 12;
+    padding: 20px;
+  }
+  
+  header {
+    padding: 15px;
+  }
+  
+  header h1 {
+    grid-column: span 12;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  header nav {
+    grid-column: span 12;
+    justify-self: center;
+  }
+  
+  header nav a {
+    margin: 0 10px;
+  }
+}

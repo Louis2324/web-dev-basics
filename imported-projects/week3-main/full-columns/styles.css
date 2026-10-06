@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  margin: 10px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  min-height: 100vh;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 30px 60px;
+  height: 100%;
+}
+
+.panel .text {
+  background-color: #eeeee7;
+  color: #323230;
+  padding: 10px 20px;
+  min-height: 300px;
+  overflow-wrap: break-word;
+}
+
+/* Welcome panel */
+.panel.welcome {
+  background-color: #323230;
+  grid-auto-rows: 1fr;
+}
+
+.panel.welcome nav a {
+  color: #a8a8a8;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.panel.welcome nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #a8a8a8;
+  transition: width 0.3s ease;
+}
+
+.panel.welcome nav a:hover::after {
+  width: 100%;
+}
+
+.panel.welcome p {
+  color: #a8a8a8;
+  line-height: 1.5em;
+  max-width: 540px;
+}
+
+.panel.welcome h1 {
+  color: #eeeee7;
+  font-size: 3em;
+}
+
+.panel.welcome footer {
+  align-self: end;
+}
+
+/* About panel */
+.panel.about {
+  background-color: #7b5130;
+  grid-template-rows: 1fr 1fr;
+}
+
+.panel.about img {
+  overflow: hidden;
+  margin: 0px;
+}
+
+/*Photos panel*/
+.panel.photos {
+  background-color: #fb963e;
+  grid-template-rows: 1fr 2fr;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .panel.welcome {
+    grid-column: span 2;
+  }
+
+  .panel {
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 25px 30px;
+  }
+
+  .panel.welcome h1 {
+    font-size: 2.5em;
+  }
+
+  .panel .text {
+    min-height: 250px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .panel {
+    padding: 20px;
+  }
+
+  .panel.welcome , .panel.about , .panel.photos {
+    grid-column: span 1;
+   }
+  
+  .panel.welcome h1 {
+    font-size: 2em;
+  }
+  
+  .panel .text {
+    min-height: auto; 
+  }
+
+  .panel.welcome nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .panel.welcome nav a {
+    margin-right: 0;
+  }
+
+  .panel.welcome nav a:hover::after {
+    width: 20%;
+  }
+}
